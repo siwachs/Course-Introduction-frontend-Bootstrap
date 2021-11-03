@@ -11,46 +11,147 @@
 
     <link href="./styling.css" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital@1&display=swap" rel="stylesheet">
+
     <title>Course Introduction</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#custom">
+
     <video autoplay loop muted id="bg_vid">
-        <source src="./src/vid/Komp_1(1).mp4" type="video/mp4">
+        <source src="./src/background/Untitled.mp4" type="video/mp4">
     </video>
 
-    <nav class="navbar navbar-dark bg-dark fixed-top" id="custom_bar">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="custom">
 
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Complete Web Devlopment Course</a>
-            </div>
+        <a class="navbar-brand" href="#">Complete Web Development Course</a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#for_toggle_bt">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="for_toggle_bt">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
+        <div class="collapse navbar-collapse" id="navbarNav">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#slider">Our Promise</a>
+                </li>
+            </ul>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Our Promise</a>
-                    </li>
-
-                </ul>
-
-            </div>
         </div>
     </nav>
 
+    <div class="jumbotron" id="home">
+        <div class="container">
+            <h1>Complete Web Development Course</h1>
+            <h2>Go From Zero To Pro Web Developer With Our Help</h2>
+            <button class="btn btn-secondary">Join Us Now!</button>
+        </div>
+    </div>
 
+    <!--Use a BS Row of 3 col-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="./src/img/star.png" alt="image" class="about-img img-fluid">
+                    <h2>High Quality Lectures</h2>
+                    <p>All Lectures have been vell well prepared for best learning experience of developers.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="./src/img/disp.png" alt="image" class="about-img img-fluid">
+                    <h2>+48H Of Content</h2>
+                    <p>Learn all major web Tech:HTML5, CSS3, JS, JQuery, Bootstrap, NodeJs, Wordpress, SQL, PHP and more
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img src="./src/img/support.png" alt="image" class="about-img img-fluid">
+                    <h2>Get Help Anytime</h2>
+                    <p>Post your questions in form and get answer within 24H. and we ara goona add some more text just
+                        to check if wordwrap is working or not</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Carousel sliders-->
+    <div id="slider" class="container">
+
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="img-fluid mx-auto d-block" src="./src/img/clear.jpg" alt="First slide">
+
+                    <div class="carousel-caption">
+                        <h2>
+                            Crystal Clear and 100% Practical Lectures.
+                        </h2>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block img-fluid mx-auto" src="./src/img/tech.png" alt="Second slide">
+
+                    <div class="carousel-caption">
+                        <h2>
+                            Full curriculum including all major Tech: Front-End, Back-End, Mobile Apps ans API's.
+                        </h2>
+                    </div>
+
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block img-fluid mx-auto" src="./src/img/road.jpg" alt="Third slide">
+
+                    <div class="carousel-caption">
+                        <h2>
+                            Start from Zero-Skills! No
+                            prior Knowledge Required!
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img class="d-block img-fluid mx-auto" src="./src/img/up.jpg" alt="Second slide">
+
+                    <div class="carousel-caption">
+                        <h2>
+                            Enhance your career and
+                            employability skills.
+                        </h2>
+                    </div>
+                </div>
+                
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>&copy;Develop By Shubham</p>
+        </div>
+        </div>
+    </div>
 
 
     <!--Add JQUERY Bootstrap and popper-->

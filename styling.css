@@ -1,8 +1,99 @@
+body{
+    font-family: 'vollkorn',sans-serif;
+    position: relative;
+}
+
 #bg_vid{
     position: fixed;
     width: 100%;
-    height: auto;/*to take full screen*/
-    z-index: -1;/*video is behid every conteny*/
+    height: auto;
+    z-index: -1;
+}
+
+#custom{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+#home{
+    color:white;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 20%;
+    /*relative to container*/
+}
+#home h1{
+    margin-bottom: 30px;
+}
+#home h2{
+    margin-bottom: 50px;
+}
+#home .btn{
+    background-color: rgb(29,167,179);
+    color: white;
+    font-size: 20px;
+    padding: 8px 20px;/*TB LR*/
+    border-radius: 8px;
+}
+
+.container{
+    max-width: 1000px;
+    /*for big devices*/
+}
+
+#home .btn:hover{
+    background-color:rgba(29,167,179,0.5);
+    color: white;
+    font-size: 20px;
+    padding: 8px 20px;/*TB LR*/
+    border-radius: 8px;
+}
+
+#about{
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+}
+#about h2{
+    font-weight: bold;
+    word-wrap: break-word;
+    height: 100px;
+}
+#about p{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+#about .about-img{
+    height: 120px;
+}
+
+/*carousel styling*/
+#slider{
+    padding-top: 100px;
+}
+#carouselExampleControls{
+    width: 60%;
+    margin: 0 auto;/*TB LR*/
+}
+.carousel-inner .carousel-item img{
+    height: 380px;
+    margin: 0 auto;/*centered*/
+}
+.carousel-caption{
+    position: relative;
+    left: auto;
+    right: auto;
+    height: 200px;
+}
+
+.footer{
+    color: white;
+    font-weight: bolder;
+    background-color:rgba(29,167,179,0.1);
+    padding: 10px 0;/*TB LR*/
+    margin-top: 80px;
+    font-size: 22px;
 }
 
 
@@ -11,6 +102,7 @@
     #bg_vid {
         width:100%;
         height: auto;
+        position: fixed;
     }
 }
 
@@ -18,18 +110,47 @@
     #bg_vid { 
         width:auto;
         height: 100%;
+        position: fixed;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     #bg_vid {
         display: none;
     }
-    body {
-        background: url('./src/gif/op-backgroung.gif') no-repeat center center fixed;
+    body{
+        background: url('./src/background/pexels-pixabay-270348.jpg') no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        z-index: -1;
+    }
+
+    /*styling*/
+    .carousel-inner .carousel-item img{
+        height: 280px;
+    }
+
+    .carousel-caption h2{
+        font-size: 23px;
+    }
+
+    .navbar-brand{
+        font-size: 22px;
+    }
+}
+
+@media (max-width:400px){
+    .carousel-inner .carousel-item img{
+        height: 180px;
+    }
+
+    .carousel-caption h2{
+        font-size: 23px;
+    }
+
+    .navbar-brand{
+        font-size: 12px;
     }
 }
